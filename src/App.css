@@ -1,82 +1,18 @@
 body{
-  background-color: #19191a;
+  background-color: #1919a4;
   justify-content: center;
+  height:100vh;
 }
 
-.App {
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-}
-
-
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.inputclass{
-  justify-content: center;
-}
-
-.maincontainer{
-  display: flex;
-  justify-content: center;
-}
-
-.singleday{
-  padding: 20px;
-  transition: .4s;
-  background-color: #222222;
-  border-radius: 15px;
-  margin: 10px;
-}
-
-.singleday:hover{
+/* .singleday:hover{
   background-color: #4b4c4e;
   transform:scale(1.2);
   box-shadow: 2px 2px 2px #121609;   
-}
+} */
 
-
-.container2{
-  position: relative;
-  right: 50%;
-  justify-content: center;
-}
-.heading{
-  position: relative;
-  left: 35%;
-  color: rgb(181, 192, 192);
-  font-size: 30px;
-}
-.inputdiv{
-  position: relative;
-  left:39%;
-  size: 10%;
-}
-
-.buttondiv{
-  position: relative;
-  left: 40%;
-  padding-bottom: 80px;
-  padding-top: 15Px;
-  
-}
-
-input{
-  height: 30px;
-}
 button{
   height: 35px;
   width: 70px;
-  color: rgb(236, 220, 220);
+  color: rgb(211, 52, 52);
   background-color: rgb(12, 12, 12);
 }

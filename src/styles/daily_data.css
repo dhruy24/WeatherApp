@@ -1,0 +1,33 @@
+.outer-container{
+    background-color: chartreuse;
+    padding: 2%;
+    
+}
+.container{
+    padding: 2%;
+    height: 100vh;
+    background-color: blueviolet;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    row-gap :10px;
+    margin: auto;
+}
+.item{
+    padding: 1%;
+    display: flex;
+    background-color: aqua;
+    flex-basis: calc(50% - 8px);
+    /* align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center; */
+    flex-direction: column;
+    flex-shrink: 2;
+}
+
+.heading{
+    text-align: center;
+    color: rgb(181, 192, 192);
+    
+  }
