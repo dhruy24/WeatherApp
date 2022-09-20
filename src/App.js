@@ -4,12 +4,12 @@ import { fetchWeatherAction } from "./redux/slices/weatherSlices";
 import './App.css';
 import './styles/daily_data.css'
 
-import WeatherCard from "./Container/WeatherCard";
+import DailyDataContainer from "./Container/DailyDataContainer";
 
 function App() {
   return(
     <div className="" >
-    <WeatherCard/>
+    <DailyDataContainer/>
     </div>
   )
   // const [city, setCity] = useState("");
@@ -57,7 +57,7 @@ function App() {
   //         <div className="buttondiv">
   //           <button
   //             type="submit"
-  //             classNameName=""
+  //             className=""
   //           >
   //             Search
   //           </button>
@@ -66,11 +66,11 @@ function App() {
 
   //       {/* Loading data from the api */}
   //       {loading ? (
-  //         <h1 classNameName="text-gray-400 text-4xl text-center">
+  //         <h1 className="text-gray-400 text-4xl text-center">
   //           Loading please wait...
   //         </h1>
   //       ) : error ? (
-  //         <h1 classNameName="text-red-400 text-2xl text-center">
+  //         <h1 className="text-red-400 text-2xl text-center">
   //           {error?.message}
   //         </h1>
   //       ) : (

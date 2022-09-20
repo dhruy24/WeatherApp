@@ -5,7 +5,7 @@
 }
 .container{
     padding: 2%;
-    height: 100vh;
+    /* height: 100vh; */
     background-color: blueviolet;
     display: flex;
     flex-wrap: wrap;
@@ -30,4 +30,13 @@
     text-align: center;
     color: rgb(181, 192, 192);
     
+}
+
+@media screen and (max-width: 297px) {
+    .item{
+        padding: 1%;
+        display: flex;
+        background-color: aqua;
+        flex-shrink: 2;
+    }
   }

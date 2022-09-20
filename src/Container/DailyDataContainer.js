@@ -4,9 +4,9 @@ import { useDispatch, useSelector } from "react-redux";
 //import { fetchWeatherAction } from "./redux/slices/weatherSlices";
 import { fetchWeatherAction } from "../redux/slices/weatherSlices"
 
-import DailyData from '../Components/DailyData';
+import DailyData from '../Components/DailyData'
 
-export default function WeatherCard() {
+export default function DailyDataContainer() {
     const [city, setCity] = useState("");
     const dispatch = useDispatch();
     useEffect(() => {
@@ -14,8 +14,9 @@ export default function WeatherCard() {
     },[])
 
     const state = useSelector(state => state);
+    console.log("stateeee",state)
     const { weather, loading, error } = state || {};
-    const {daily} = weather || {};
+    const { daily,current } = weather || {};
     
     var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']; 
     var local_date = new Date(weather?.daily[0].dt * 1000).toLocaleTimeString("en-US")
@@ -36,6 +37,7 @@ export default function WeatherCard() {
 
     const props = {
      daily,
+     current,
      day,
      handleSubmit,
      setCity,

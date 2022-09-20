@@ -1,12 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import WeatherCard from "./WeatherCard";
+import CurrentDay from "./CurrentDay";
 import PropTypes from "prop-types";
 import "../styles/daily_data.css";
 
 function DailyData(props) {
   console.log(props, "dataa");
-  let { daily, day, handleSubmit, city, setCity,days_res } = props;
-
+  let { daily,current, day, handleSubmit, city, setCity,days_res } = props;
+  day++;
   return (
     <div className="outer-container">
       <form onSubmit={handleSubmit} className="py-[5%] bg-gray-700">
@@ -19,15 +20,18 @@ function DailyData(props) {
             className=" inputsearch"
           ></input>
 
-          <button type="submit" classNameName="">
+          <button type="submit" className="">
             Search
           </button>
         </div>
       </form>
+      <div>
+        <CurrentDay daily={daily || []} current ={current} day={day} days_res = {days_res} city={city} /> 
+      </div>
       {/* <div className='m-auto flex  flex-wrap w-3/5 justify-evenly'> */}
       <div className="container">
-        {daily?.map((element) => {
-          day++;
+        {daily?.slice(1,6).map((element) => {
+         day++;
           const { temp, humidity } = element || {};
           const { max, min } = temp;
           const props = {
