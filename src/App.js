@@ -1,13 +1,13 @@
-import { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { fetchWeatherAction } from "./redux/slices/weatherSlices";
+// import { useEffect, useState } from "react";
+// import { useDispatch, useSelector } from "react-redux";
+// import { fetchWeatherAction } from "./redux/slices/weatherSlices";
 import './App.css';
-import './styles/daily_data.css'
 
 import DailyDataContainer from "./Container/DailyDataContainer";
 
 function App() {
   return(
+    
     <div className="" >
     <DailyDataContainer/>
     </div>
