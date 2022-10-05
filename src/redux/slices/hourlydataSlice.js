@@ -10,11 +10,7 @@ export const fetchHourlyAction = createAsyncThunk(
         `http://api.openweathermap.org/data/2.5/weather?q=${payload}&appid=${process.env.REACT_APP_OPEN_WEATHER_KEY}`
       );
       const value = await hourly_data.json();
-
-      console.log("valueeee",value)
-
       return value;
-
     } 
     catch (error) {
       if (!error?.response){
@@ -32,16 +28,13 @@ const hourltDataSlice = createSlice({
         //pending
         builder.addCase(fetchHourlyAction.pending,(state)=>{
             state.loading = true;
-            console.log("on way")
         });
         builder.addCase(fetchHourlyAction.fulfilled,(state,action)=>{
-            console.log("yes",action.payload.coord)
             state.hourly = action?.payload?.data;
             state.loading = false;
             state.error =  undefined;
         });
         builder.addCase(fetchHourlyAction.rejected,(state,action)=>{
-            console.log("no")
             state.loading = false;
             state.hourly = undefined;
             state.error =  action?.payload?.data;

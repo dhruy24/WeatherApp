@@ -11,7 +11,7 @@ import {
 export default function Graph(props) {
   const { data } = props || {}
   return (
-    <ResponsiveContainer  height={400}>
+    <ResponsiveContainer  height={300}>
     <AreaChart
       height={400}
       data={data}
@@ -25,7 +25,7 @@ export default function Graph(props) {
       <XAxis dataKey="time" />
       <YAxis />
       <Tooltip />
-      <Area type="monotone" dataKey="temp" stroke="#8884d8" fill="#8884d8" />
+      <Area type="monotone" dataKey="temp" stroke="#545287" fill="#8884d8" dot={{ stroke: '#545287', strokeWidth: 2 }} />
     </AreaChart>
     </ResponsiveContainer>
   );

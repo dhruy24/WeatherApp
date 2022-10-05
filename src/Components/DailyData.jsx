@@ -1,10 +1,12 @@
 import WeatherCard from "./WeatherCard";
 import CurrentDay from "./CurrentDay";
 import PropTypes from "prop-types";
-import "../styles/daily_data.css";
+import Form from "./Form";
 import GraphContainer from "../Container/GraphContainer";
 import WeatherCardContainer from "../Container/WeatherCardContainer";
 import Loader from "./Loader";
+
+import "../styles/daily_data.css";
 
 function DailyData(props) {
   let {
@@ -18,31 +20,21 @@ function DailyData(props) {
     days_res,
     location,
     loading,
-    error,
   } = props;
   day++;
   return (
     <div className="outer-container">
-      <form onSubmit={handleSubmit} className="py-[5%] bg-gray-700">
-        <div className="heading">
-          <input
-            value={city}
-            onChange={(e) => setCity(e.target.value)}
-            placeholder="Search City"
-            className=" inputsearch"
-          ></input>
-          <button type="submit" className="">
-            Search
-          </button>
-        </div>
-      </form>
+      <div class = 'text-[30px] text-center mb-2 tracking-wide font-bold'><h1>Weather App</h1></div>
+      <Form handleSubmit={handleSubmit} setCity={setCity} city={city} />
       {loading ? (
         <Loader/>
-      ) : error ? (
-        <h1 className="text-red-400 text-2xl text-center">{error?.message}</h1>
+      ) : !daily ? (
+          <div class="p-4 mb-4 text-sm text-red-700 bg-red-100 rounded-lg dark:bg-red-200 dark:text-red-800 mt-10" role="alert">
+            <span class="font-medium">Invalid Input Alert! </span> Change the city
+          </div>
       ) : (
         <>
-          <div>
+          <div class="">
             <CurrentDay
               daily={daily || []}
               current={current}

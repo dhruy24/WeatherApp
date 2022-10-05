@@ -14,7 +14,6 @@ export default function DailyDataContainer() {
     },[dispatch])
 
     const state = useSelector(state => state.weatherReducer);
-    
     const { weather, loading, error } = state || {};
     const { daily,current,hourly } = weather || {};
     var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']; 

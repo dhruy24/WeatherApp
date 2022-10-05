@@ -1,0 +1,32 @@
+@media only screen and (max-width: 322px) {
+    .abc {
+        background-color: rgb(104, 226, 43);
+    }
+    .temp-parah{
+        font-size: 22px;
+    }
+    .degree-c{
+        font-size: 10px ;
+    }
+    .header{
+        font-size: 12px;
+    }
+    .value{
+        font-size: 12px;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .temp-parah{
+        font-size: 38px;
+    }
+    .degree-c{
+        font-size: 18px ;
+    }
+    .header{
+        font-size: 20px;
+    }
+    .value{
+        font-size: 18px;
+    }
+}

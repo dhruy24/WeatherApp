@@ -1,14 +1,8 @@
 body{
-  background-color: #1919a4;
+  background-color: rgb(140, 140, 140);
   justify-content: center;
   height:100vh;
 }
-
-/* .singleday:hover{
-  background-color: #4b4c4e;
-  transform:scale(1.2);
-  box-shadow: 2px 2px 2px #121609;   
-} */
 
 button{
   height: 35px;
