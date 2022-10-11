@@ -5,9 +5,10 @@ import Form from "./Form";
 import GraphContainer from "../Container/GraphContainer";
 import WeatherCardContainer from "../Container/WeatherCardContainer";
 import Loader from "./Loader";
+import FollowMeHippo from "./FollowMeHippo";
 
 import "../styles/daily_data.css";
-import FollowMeHippo from "./FollowMeHippo";
+
 
 function DailyData(props) {
   let {
