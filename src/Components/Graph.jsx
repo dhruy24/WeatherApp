@@ -11,7 +11,7 @@ import {
 export default function Graph(props) {
   const { data } = props || {}
   return (
-    <ResponsiveContainer  height={300}>
+    <ResponsiveContainer  height={150}>
     <AreaChart
       height={400}
       data={data}

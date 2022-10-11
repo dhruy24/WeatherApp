@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import './App.css';
 import './styles/daily_data.css'
 

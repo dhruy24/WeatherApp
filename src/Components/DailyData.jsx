@@ -7,6 +7,7 @@ import WeatherCardContainer from "../Container/WeatherCardContainer";
 import Loader from "./Loader";
 
 import "../styles/daily_data.css";
+import FollowMeHippo from "./FollowMeHippo";
 
 function DailyData(props) {
   let {
@@ -24,8 +25,10 @@ function DailyData(props) {
   day++;
   return (
     <div className="outer-container">
-      <div class = 'text-[30px] text-center mb-2 tracking-wide font-bold'><h1>Weather App</h1></div>
+      <div class = 'text-[38px] sm:text-[50px] lg:text-[70px] text-center mb-2 tracking-wide font-bold tracking-wider'><h1>Weather App</h1></div>
+      
       <Form handleSubmit={handleSubmit} setCity={setCity} city={city} />
+      <FollowMeHippo/>
       {loading ? (
         <Loader/>
       ) : !daily ? (
