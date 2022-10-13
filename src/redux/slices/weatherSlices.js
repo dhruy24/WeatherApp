@@ -7,13 +7,13 @@ export const fetchWeatherAction = createAsyncThunk(
   async (payload, { rejectWithValue }) => {
     try {
       const one_day_data = await fetch(
-        `http://api.openweathermap.org/data/2.5/weather?q=${payload}&appid=${process.env.REACT_APP_OPEN_WEATHER_KEY}`
+        `https://api.openweathermap.org/data/2.5/weather?q=${payload}&appid=${process.env.REACT_APP_OPEN_WEATHER_KEY}`
       )
       const value = await one_day_data.json();
       const latitude = value.coord.lat
       const longitude = value.coord.lon
       const  inputdata  = await axios.get(
-        `http://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${process.env.REACT_APP_OPEN_WEATHER_KEY}`
+        `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${process.env.REACT_APP_OPEN_WEATHER_KEY}`
       );
       return inputdata;
     } catch (error) {
