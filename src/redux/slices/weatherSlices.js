@@ -13,7 +13,7 @@ export const fetchWeatherAction = createAsyncThunk(
       const latitude = value.coord.lat
       const longitude = value.coord.lon
       const  inputdata  = await axios.get(
-        `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${process.env.REACT_APP_OPEN_WEATHER_KEY}`
+        `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${process.env.REACT_APP_OPEN_WEATHER_KEY}`
       );
       return inputdata;
     } catch (error) {
